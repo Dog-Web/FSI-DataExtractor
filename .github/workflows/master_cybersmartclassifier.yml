@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'cybersmartclassifier'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_b9c84e9e1b3447f988cb825a864acd86 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_077160e4789b4841b123fad96638f212 }}
