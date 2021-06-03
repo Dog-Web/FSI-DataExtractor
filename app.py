@@ -8,7 +8,7 @@ import os
 from requests import get, post
 import urllib
 app = Flask(__name__)
-def runAnalysis(input_file, output_file, file_type):
+def runAnalysis(input_file='artdoc.pdf', output_file='', file_type='application/json'):
     # Endpoint URL
     endpoint = r"https://fsiformrecognizer.cognitiveservices.azure.com/"
     # Subscription Key
@@ -85,5 +85,5 @@ def runAnalysis(input_file, output_file, file_type):
 
 @app.route("/")
 def hello():
-    runAnalysis(filej, '', 'application/pdf')
+    runAnalysis()
     return render_template("index.html")
