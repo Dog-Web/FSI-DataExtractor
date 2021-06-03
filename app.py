@@ -20,6 +20,7 @@ formUrl="https://fsi2.blob.core.windows.net/trainimages/FSI%20-%20DENSA%20SHARK%
 poller = form_recognizer_client.begin_recognize_custom_forms_from_url(model_id="ca9bb8ab-a0ff-42a5-99e8-6ba5efe2f1e8", form_url=formUrl)
 result = poller.result()
 tags=[]
+values=[]
 for recognized_form in result:
     print("Form type: {}".format(recognized_form.form_type))
     for name, field in recognized_form.fields.items():
@@ -29,10 +30,12 @@ for recognized_form in result:
             field.confidence
         ))
         tags.append(name)
+        values.append(field.value)
+data=tuple(zip(tags,values))    
 
 
 
 
 @app.route("/")
 def hello():
-    return render_template("index.html",output=tags[0])
+    return render_template("index.html",rows=data)
