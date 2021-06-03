@@ -25,12 +25,13 @@
         <tr>
             {% for cell in row %}
             <td>{{cell}}</td>
-            {% endfor %}
             {% if cell=="selected" %}
             <td><input id="RememberMe" name="RememberMe" type="checkbox" value="The Value" checked="checked" /> </td>
-            {%elif cell=="unselected"%}
-            <td><input id="RememberMe" name="RememberMe" type="checkbox" value="The Value" checked="checked" /> </td>
+            {% elif cell=="unselected" %}
+            <td><input id="RememberMe" name="RememberMe" type="checkbox" value="The Value" checked="unchecked" /> </td>
             {%endif%}
+            {% endfor %}
+            
         </tr>
         {% endfor %}
     </table>
