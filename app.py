@@ -6,6 +6,7 @@ import getopt
 import sys
 import os
 from requests import get, post
+from abc import abk
 import urllib
 app = Flask(__name__)
 '''filej = urllib.request.Request('https://fsi2.blob.core.windows.net/trainimages/newtestdensa.pdf')
