@@ -8,7 +8,6 @@ import os
 from requests import get, post
 import urllib
 app = Flask(__name__)
-filej = urllib.request.Request('https://fsi2.blob.core.windows.net/trainimages/newtestdensa.pdf')
 def runAnalysis(input_file, output_file, file_type):
     # Endpoint URL
     endpoint = r"https://fsiformrecognizer.cognitiveservices.azure.com/"
@@ -30,7 +29,8 @@ def runAnalysis(input_file, output_file, file_type):
         'Ocp-Apim-Subscription-Key': apim_key,
     }
     try:
-        with urllib.request.urlopen(input_file) as responsee:
+        filej = urllib.request.Request('https://fsi2.blob.core.windows.net/trainimages/newtestdensa.pdf')
+        with urllib.request.urlopen(filej) as responsee:
             data_bytes = responsee.read()
     except IOError:
         print("Inputfile not accessible.")
