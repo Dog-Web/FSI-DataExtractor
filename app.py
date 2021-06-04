@@ -31,7 +31,7 @@ for recognized_form in result:
         ))
         tags.append(name)
         values.append(field.value)
-data=tuple(zip(tags,values))    
+data=dict(zip(tags,values))    
 
 
 
