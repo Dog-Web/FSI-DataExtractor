@@ -47,16 +47,6 @@ def hello():
         formUrl=reporturl
         if(formUrl==""):
             return "Blank given"
-        poller = form_recognizer_client.begin_recognize_custom_forms_from_url(model_id="ca9bb8ab-a0ff-42a5-99e8-6ba5efe2f1e8", form_url=formUrl)
-        result = poller.result()
-        tags=[]
-        values=[]
-        for recognized_form in result:
-            print("Form type: {}".format(recognized_form.form_type))
-            for name, field in recognized_form.fields.items():
-                tags.append(name)
-                values.append(field.value)
-        data=tuple(zip(tags,values))   
-        ans=dict(zip(tags,values))
+       
        
     return render_template("index.html",rows=data,ans=ans)
