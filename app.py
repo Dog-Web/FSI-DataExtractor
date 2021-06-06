@@ -36,7 +36,9 @@ ans=dict(zip(tags,values))
  
 
 
-
+@app.route("/input")
+def abc():
+    return render_template("home.html")
 
 @app.route("/")
 def hello():
