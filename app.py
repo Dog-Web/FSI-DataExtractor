@@ -58,6 +58,5 @@ def hello():
                 values.append(field.value)
         data=tuple(zip(tags,values))   
         ans=dict(zip(tags,values))
-        return render_template("index.html",rows=data,ans=ans)
        
     return render_template("index.html",rows=data,ans=ans)
