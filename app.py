@@ -46,7 +46,7 @@ def hello():
         reporturl=request.form.get("inputurl")
         formUrl=reporturl
         if(formUrl==""):
-            return "Blank given"
+            return render_template("index.html",rows=data,ans=ans)
         endpoint = "https://fsiformrecognizer.cognitiveservices.azure.com/"
         key = "b1786032cc014d0f9c4cd24530e3fb6d"
         form_recognizer_client = FormRecognizerClient(endpoint, AzureKeyCredential(key))
