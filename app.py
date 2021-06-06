@@ -31,11 +31,13 @@ for recognized_form in result:
         ))
         tags.append(name)
         values.append(field.value)
-data=tuple(zip(tags,values))    
+data=tuple(zip(tags,values))   
+ans=dict(zip(tags,values))
+ 
 
 
 
 
 @app.route("/")
 def hello():
-    return render_template("index.html",rows=data)
+    return render_template("index.html",rows=data,ans=ans)
