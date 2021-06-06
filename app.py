@@ -54,11 +54,6 @@ def hello():
         for recognized_form in result:
             print("Form type: {}".format(recognized_form.form_type))
             for name, field in recognized_form.fields.items():
-                print("Field '{}' has value '{}' and a confidence score of {}".format(
-                    name,
-                    field.value,
-                    field.confidence
-                ))
                 tags.append(name)
                 values.append(field.value)
         data=tuple(zip(tags,values))   
