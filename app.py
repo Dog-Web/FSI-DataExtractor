@@ -41,7 +41,7 @@ def abc():
     return render_template("home.html")
 
 @app.route("/", methods=["GET","POST"])
-def hello():
+def hello(data,ans):
     if request.method=="POST":
         reporturl=request.form.get("inputurl")
         formUrl=reporturl
