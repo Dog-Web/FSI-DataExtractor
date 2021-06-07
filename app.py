@@ -40,8 +40,15 @@ ans=dict(zip(tags,values))
 def abc():
     return render_template("home.html")
 
-@app.route("/", methods=["GET","POST"])
-def hello(data,ans):
+@app.route("/")
+def default():
+    return render_template("index.html",rows=data,ans=ans)
+
+
+
+
+@app.route("/analysisresults", methods=["GET","POST"])
+def hello():
     if request.method=="POST":
         reporturl=request.form.get("inputurl")
         formUrl=reporturl
