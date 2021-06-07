@@ -55,6 +55,13 @@ def hello():
         result = poller.result()
         tags=[]
         values=[]
+        for recognized_form in result:
+            for name, field in recognized_form.fields.items():
+                tags.append(name)
+                values.append(field.value)
+        data=tuple(zip(tags,values))   
+        ans=dict(zip(tags,values))
+
         
        
     return render_template("index.html",rows=data,ans=ans)
