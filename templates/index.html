@@ -859,16 +859,8 @@
           border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
           padding:0in 5.35pt 0in 5.35pt;height:5.55pt" width="356" valign="top">
           <p class="MsoNormal"><b><span style="font-size:9.0pt" lang="EN-GB">Detained last
-          PSC inspection: &nbsp;</span></b><b>
-          
-            {% if ans["Detained last PSC Inspection"]=="selected" %}
-                <div id="yes Detained last PSC Inspection" style="font-size:10.0pt">&#10060;</div> 
-            {% elif ans["Detained last PSC Inspection"]=="unselected" %}
-                <div id="yes Detained last PSC Inspection" >&#9744;</div>
-            {%endif%}
-          
-          </b><b><span style="font-size:10.0pt" lang="EN-GB"><a name="Check1"></a></span></b><b><span style="font-size:9.0pt" lang="EN-GB">Yes</span></b><b><span style="font-size:10.0pt" lang="EN-GB">&nbsp;&nbsp; </span></b><b>
-            {% if ans["Detained last PSC Inspection"]=="unselected" %}
+          PSC inspection: &nbsp;</span></b><b>{% if ans["Detained last PSC Inspection"]=="selected" %}<div id="yes Detained last PSC Inspection" style="font-size:10.0pt">&#10060;</div> {% elif ans["Detained last PSC Inspection"]=="unselected" %}<div id="yes Detained last PSC Inspection" >&#9744;</div>{%endif%}</b><b><span style="font-size:10.0pt" lang="EN-GB"><a name="Check1"></a></span></b><b><span style="font-size:9.0pt" lang="EN-GB">Yes</span></b><b><span style="font-size:10.0pt" lang="EN-GB">&nbsp;&nbsp; </span></b><b>
+           {% if ans["Detained last PSC Inspection"]=="unselected" %}
                 <div id="no Detained last PSC Inspection" style="font-size:10.0pt">&#9989</div> 
             {% elif ans["Detained last PSC Inspection"]=="selected" %}
                 <div id="no Detained last PSC Inspection" >&#9744;</div>
