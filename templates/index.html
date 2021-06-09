@@ -859,7 +859,21 @@
           border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
           padding:0in 5.35pt 0in 5.35pt;height:5.55pt" width="356" valign="top">
           <p class="MsoNormal"><b><span style="font-size:9.0pt" lang="EN-GB">Detained last
-          PSC inspection: &nbsp;</span></b><b><input id="RememberMe" name="RememberMe" type="checkbox" value="The Value"></b><b><span style="font-size:10.0pt" lang="EN-GB"><a name="Check1"></a></span></b><b><span style="font-size:9.0pt" lang="EN-GB">Yes</span></b><b><span style="font-size:10.0pt" lang="EN-GB">&nbsp;&nbsp; </span></b><b><input id="RememberMe" name="RememberMe" type="checkbox" value="The Value" checked="checked"></b><b><span style="font-size:9.0pt" lang="EN-GB">No</span></b></p>
+          PSC inspection: &nbsp;</span></b><b>
+          
+            {% if ans["Detained last PSC Inspection"]=="selected" %}
+                <div id="Detained last PSC Inspection" style="font-size:10.0pt">&#10060;</div> 
+            {% elif ans["Detained last PSC Inspection"]=="unselected" %}
+                <div id="Detained last PSC Inspection" >&#9744;</div>
+            {%endif%}
+          
+          </b><b><span style="font-size:10.0pt" lang="EN-GB"><a name="Check1"></a></span></b><b><span style="font-size:9.0pt" lang="EN-GB">Yes</span></b><b><span style="font-size:10.0pt" lang="EN-GB">&nbsp;&nbsp; </span></b><b>&#9989;
+            {% if ans["Detained last PSC Inspection"]=="unselected" %}
+                <div id="Detained last PSC Inspection" style="font-size:10.0pt">&#9989</div> 
+            {% elif ans["Detained last PSC Inspection"]=="selected" %}
+                <div id="Detained last PSC Inspection" >&#9744;</div>
+            {%endif%}
+          </b><b><span style="font-size:9.0pt" lang="EN-GB">No</span></b></p>
           </td>
          </tr><tr style="page-break-inside:avoid;height:28.1pt">
           <td colspan="2" style="width:94.25pt;border-top:none;
@@ -1020,7 +1034,14 @@
   <td style="width:22.5pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.35pt 0in 5.35pt;
   height:14.15pt" width="30" valign="top">
-  <p class="MsoNormal" style="text-align:center" align="center">&#9744;</p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["Certificate of Registry"]=="selected" %}
+        <div id="S1Q1" style="font-size:10.0pt">&#10060;</div> 
+    {% elif ans["Certificate of Registry"]=="unselected" %}
+        <div id="S1Q1" >&#9744;</div>
+    {%endif%}
+  
+  </p>
   </td>
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1048,7 +1069,17 @@
   <td style="width:24.0pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;padding:0in 5.35pt 0in 5.35pt;
   height:14.15pt" width="32" valign="top">
-  <p class="MsoNormal" style="text-align:center" align="center"><div id="S1Q8">&#9744;</div></p>
+  <p class="MsoNormal" style="text-align:center" align="center"><div id="S1Q8">
+   
+    {% if ans["MS Notices File"]=="selected" %}
+        <div id="S1Q6" style="font-size:10.0pt">&#10060;</div> 
+    {% elif ans["MS Notices File"]=="unselected" %}
+        <div id="S1Q6" >&#9744;</div>
+    {%endif%}
+
+
+  
+  </div></p>
   </td>
  </tr>
  
@@ -1088,7 +1119,18 @@
   <td style="width:22.5pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.35pt 0in 5.35pt;
   height:14.15pt" width="30" valign="top">
-  <p class="MsoNormal" style="text-align:center" align="center">&#9744;</p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+  
+    {% if ans["Articles of Agreement (Valid 1 yr)"]=="selected" %}
+        <div id="S1Q2" style="font-size:10.0pt">&#10060;</div> 
+    {% elif ans["Articles of Agreement (Valid 1 yr)"]=="unselected" %}
+        <div id="S1Q2" >&#9744;</div>
+    {%endif%}
+  
+
+  
+  
+  </p>
   </td>
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1119,7 +1161,17 @@
   <td style="width:24.0pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;padding:0in 5.35pt 0in 5.35pt;
   height:14.15pt" width="32" valign="top">
-  <p class="MsoNormal" style="text-align:center" align="center">&#9744;</p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+  
+    {% if ans["Technical Notices"]=="selected" %}
+        <div id="S1Q7" style="font-size:10.0pt">&#10060;</div> 
+    {% elif ans["Technical Notices"]=="unselected" %}
+        <div id="S1Q7" >&#9744;</div>
+    {%endif%}
+  
+  
+  
+  </p>
   </td>
 
  </tr>
@@ -1154,7 +1206,14 @@
   <td style="width:22.5pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.35pt 0in 5.35pt;
   height:14.15pt" width="30" valign="top">
-  <p class="MsoNormal" align="center">&#9744;</p>
+  <p class="MsoNormal" align="center">
+    {% if ans["Minimum Safe Manning Certificate"]=="selected" %}
+        <div id="S1Q3" style="font-size:10.0pt">&#10060;</div> 
+    {% elif ans["Minimum Safe Manning Certificate"]=="unselected" %}
+        <div id="S1Q3" >&#9744;</div>
+    {%endif%}
+  
+  </p>
   </td>
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1185,7 +1244,14 @@
   <td style="width:24.0pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;padding:0in 5.35pt 0in 5.35pt;
   height:14.15pt" width="32" valign="top">
-  <p class="MsoNormal" style="text-align:center" align="center">&#9744;</p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["Merchant Shipping Act (Cap 234)"]=="selected" %}
+        <div id="S1Q8" style="font-size:10.0pt">&#10060;</div> 
+    {% elif ans["Merchant Shipping Act (Cap 234)"]=="unselected" %}
+        <div id="S1Q8" >&#9744;</div>
+    {%endif%}
+  
+  </p>
   </td>
  </tr>
 
