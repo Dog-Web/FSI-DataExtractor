@@ -1,5 +1,78 @@
-<form action="{{ url_for("hello") }}" method="post">
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #f5fafe;
+}
+
+h1 {
+  color: #f49531;
+  margin-left: 40px;
+  padding-top: 70px;
+  font-family: "Copperplate", "Papyrus", fantasy;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+    max-height: 60px;
+transition-duration: 0.5s;
+
+}
+form {
+  padding-top: 70px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+nav{margin:0}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(240, 215, 190);
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: rgb(194, 189, 189);}
+
+ul.topnav li a.active {background-color: #f49531}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+
+
+</style>
+</head>
+<body>
+  <div id=nav>  <ul class="topnav">
+        <li><a class="active" href="#home"><img id="logo" src="{{url_for('static', filename='OriginalonTransparent.png')}}" alt="logo"></a></li>
+
+        <li class="right"><a href="#about">About</a></li>
+      </ul>    </div>
+<div align=center><h1>Enter the URL of the form
+    <br> which you want to Analyze</h1></div>
+      <div id=form align="center"><form action="{{ url_for("hello") }}" method="post">
 <label for="inputurl">FSI Report link:</label>
 <input type="text" id="inputurl" name="inputurl" placeholder="inputurl">
 <button type="submit">Analyze</button>
-</form>
+</form></div>
+</body>
+</html>
