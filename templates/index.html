@@ -1402,17 +1402,22 @@
         </div>
         
         <script>
-        const S1Q5=document.getElementById("S1Q5"); 
-             console.log(S1Q5.innerHTML);
-             if(S1Q5.innerHTML=="❌"){
+        
+            var i;
+for (i = 1; i < 10; i++) {
+  var arg="S"+1+"Q"+i;
+
+        const piece=document.getElementById(""+arg); 
+             console.log(piece.innerHTML);
+             if(piece.innerHTML=="❌"){
                  
-                S1Q5.parentNode.parentNode.style.backgroundColor="#FF0000";
+                piece.parentNode.parentNode.style.backgroundColor="#ff3333";
              }
-             else if(S1Q5.innerHTML=="☐"){
-                S1Q5.parentNode.parentNode.style.backgroundColor="#800080";
+             else if(piece.innerHTML=="☐"){
+                
              }
              
-
+}
     
             
         </script>
