@@ -1404,8 +1404,13 @@
         <script>
         const S1Q5=document.getElementById("S1Q5"); 
         
-             
-             S1Q5.parentNode.parentNode.style.backgroundColor="#800080";
+             if(S1Q5.innerHTML=="&#10060;"){
+                S1Q5.parentNode.style.backgroundColor="#FF0000";
+             }
+             else if(S1Q5.innerHTML=="&#9744;"){
+                S1Q5.parentNode.style.backgroundColor="#800080";
+             }
+             S1Q5.parentNode.style.backgroundColor="#800080";
 
     
             
