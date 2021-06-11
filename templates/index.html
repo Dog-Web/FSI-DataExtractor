@@ -1028,7 +1028,7 @@
   height:14.15pt" width="30" valign="top">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["Certificate of Registry"]=="selected" %}
-        <div id="S1Q1" style="font-size:10.0pt">&#10060;</div> 
+        <div id="S1Q1" class="invalid" style="font-size:10.0pt">&#10060;</div> 
     {% elif ans["Certificate of Registry"]=="unselected" %}
         <div id="S1Q1" >&#9744;</div>
     {%endif%}
@@ -1064,7 +1064,7 @@
   <p class="MsoNormal" style="text-align:center" align="center">
    
     {% if ans["MS Notices File"]=="selected" %}
-        <div id="S1Q6" style="font-size:10.0pt">&#10060;</div> 
+        <div id="S1Q6" class="invalid" style="font-size:10.0pt">&#10060;</div> 
     {% elif ans["MS Notices File"]=="unselected" %}
         <div id="S1Q6" >&#9744;</div>
     {%endif%}
@@ -1114,7 +1114,7 @@
   <p class="MsoNormal" style="text-align:center" align="center">
   
     {% if ans["Articles of Agreement (Valid 1 yr)"]=="selected" %}
-        <div id="S1Q2" style="font-size:10.0pt">&#10060;</div> 
+        <div id="S1Q2" class="invalid" style="font-size:10.0pt">&#10060;</div> 
     {% elif ans["Articles of Agreement (Valid 1 yr)"]=="unselected" %}
         <div id="S1Q2" >&#9744;</div>
     {%endif%}
@@ -1156,7 +1156,7 @@
   <p class="MsoNormal" style="text-align:center" align="center">
   
     {% if ans["Technical Notices"]=="selected" %}
-        <div id="S1Q7" style="font-size:10.0pt">&#10060;</div> 
+        <div id="S1Q7" class="invalid" style="font-size:10.0pt">&#10060;</div> 
     {% elif ans["Technical Notices"]=="unselected" %}
         <div id="S1Q7" >&#9744;</div>
     {%endif%}
@@ -1200,7 +1200,7 @@
   height:14.15pt" width="30" valign="top">
   <p class="MsoNormal" align="center">
     {% if ans["Minimum Safe Manning Certificate"]=="selected" %}
-        <div id="S1Q3" style="font-size:10.0pt">&#10060;</div> 
+        <div id="S1Q3" class="invalid" style="font-size:10.0pt">&#10060;</div> 
     {% elif ans["Minimum Safe Manning Certificate"]=="unselected" %}
         <div id="S1Q3" >&#9744;</div>
     {%endif%}
@@ -1238,7 +1238,7 @@
   height:14.15pt" width="32" valign="top">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["Merchant Shipping Act (Cap 234)"]=="selected" %}
-        <div id="S1Q8" style="font-size:10.0pt">&#10060;</div> 
+        <div id="S1Q8" class="invalid" style="font-size:10.0pt">&#10060;</div> 
     {% elif ans["Merchant Shipping Act (Cap 234)"]=="unselected" %}
         <div id="S1Q8" >&#9744;</div>
     {%endif%}
@@ -1285,7 +1285,7 @@
   <p class="MsoNormal" style="text-align:center" align="center">
     <!-- This is for invalid/wrong indication holder ,copy paste it everywhere -->
     {% if ans["Radio Station License"]=="selected" %}
-        <div id="S1Q4" style="font-size:10.0pt">&#10060;</div> 
+        <div id="S1Q4" class="invalid" style="font-size:10.0pt">&#10060;</div> 
     {% elif ans["Radio Station License"]=="unselected" %}
         <div id="S1Q4" >&#9744;</div>
     {%endif%}
@@ -1327,7 +1327,7 @@
   height:14.15pt" width="32">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["MS Act Subsidiary Legislation"]=="selected" %}
-        <div id="S1Q9" style="font-size:10.0pt">&#10060;</div> 
+        <div id="S1Q9" class="invalid" style="font-size:10.0pt">&#10060;</div> 
     {% elif ans["MS Act Subsidiary Legislation"]=="unselected" %}
         <div id="S1Q9" >&#9744;</div>
     {%endif%}
@@ -1370,7 +1370,7 @@
   height:14.15pt" width="32">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["Maltese Ships Official Log Book with regular inspection entries for drills/accomodation/LSA/FFE"]=="selected" %}
-        <div id="S1Q5" style="font-size:10.0pt">&#10060;</div> 
+        <div id="S1Q5" class="invalid" style="font-size:10.0pt">&#10060;</div> 
     {% elif ans["Maltese Ships Official Log Book with regular inspection entries for drills/accomodation/LSA/FFE"]=="unselected" %}
         <div id="S1Q5" >&#9744;</div>
     {%endif%}
@@ -1475,12 +1475,28 @@
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
-  <p class="MsoNormal" style="text-align:center" align="center">&#9744;</p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["Cargo Ship Safety Equipment Certificate"]=="selected" %}
+        <div id="S2Q1" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+    {% elif ans["Cargo Ship Safety Equipment Certificate"]=="unselected" %}
+        <div id="S2Q1" >&#9744;</div>
+    {%endif%}
+  
+  
+  </p>
   </td>
   <td colspan="3" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
-  <p class="MsoNormal" style="text-align:center" align="center">&#9744;</p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["NA Cargo Ship Safety Equipment Certificate"]=="selected" %}
+        <div id="NA S2Q1" class="NA" style="font-size:20.0pt">&#9746;</div> 
+    {% elif ans["NA Cargo Ship Safety Equipment Certificate"]=="unselected" %}
+        <div id="NA S2Q1" >&#9744;</div>
+    {%endif%}
+
+
+  </p>
   </td>
   <td colspan="5" style="width:112.5pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
@@ -1504,24 +1520,95 @@
   <td colspan="4" style="width:37.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="49">
-  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB"><img src="Form%20TM%20MSD%20TD%20FSI%20001%20Cargo%20FSI%20report%20Issue%202%20Rev7_files/image002.gif" width="18" height="17"></span></p>
+  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB">&#9989</span></p>
   </td>
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
-  <p class="MsoNormal" style="text-align:center" align="center"></p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["Cargo Ship Safety Construction Certificate"]=="selected" %}
+        <div id="S2Q2" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+    {% elif ans["Cargo Ship Safety Construction Certificate"]=="unselected" %}
+        <div id="S2Q2" >&#9744;</div>
+    {%endif%}
+  
+  
+  
+  
+  </p>
   </td>
   <td colspan="3" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
-  <p class="MsoNormal" style="text-align:center" align="center"></p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["NA Cargo Ship Safety Construction Certificate"]=="selected" %}
+        <div id="NA S2Q2" class="NA" style="font-size:20.0pt">&#9746;</div> 
+    {% elif ans["NA Cargo Ship Safety Construction Certificate"]=="unselected" %}
+        <div id="NA S2Q2" >&#9744;</div>
+    {%endif%}
+  
+  </p>
   </td>
   <td colspan="5" style="width:112.5pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="150">
-  <p class="MsoNormal"><b><span style="font-size:10.0pt" lang="EN-GB">3/12/2000</span></b></p>
+  <p class="MsoNormal"><b><span style="font-size:10.0pt" lang="EN-GB">{{ans["Comment on section22"]}}</span></b></p>
   </td>
  </tr>
+
+
+ <!--Data Row 3  -->
+
+ <tr style="height:.2in">
+  <td style="width:30.8pt;border-top:none;border-left:solid windowtext 2.25pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.35pt 0in 5.35pt;height:.2in" width="41">
+  <p class="MsoNormal" style="text-align:center" align="center"><b><span style="font-size:10.0pt" lang="EN-GB">3</span></b></p>
+  </td>
+  <td colspan="9" style="width:314.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.35pt 0in 5.35pt;height:.2in" width="420">
+  <p class="MsoNormal"><span style="font-size:10.0pt" lang="EN-GB">Cargo Ship
+  Safety Radio Certificate </span></p>
+  </td>
+  <td colspan="4" style="width:37.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.35pt 0in 5.35pt;height:.2in" width="49">
+  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB">&#9989</span></p>
+  </td>
+  <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["Cargo Ship Safety Radio Certificate"]=="selected" %}
+        <div id="S2Q3" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+    {% elif ans["Cargo Ship Safety Radio Certificate"]=="unselected" %}
+        <div id="S2Q3" >&#9744;</div>
+    {%endif%}
+  
+  
+  </p>
+  </td>
+  <td colspan="3" style="width:27.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["NA Cargo Ship Safety Radio Certificate"]=="selected" %}
+        <div id="NA S2Q3" class="NA" style="font-size:20.0pt">&#9746;</div> 
+    {% elif ans["NA Cargo Ship Safety Radio Certificate"]=="unselected" %}
+        <div id="NA S2Q3" >&#9744;</div>
+    {%endif%}
+  
+  </p>
+  </td>
+  <td colspan="5" style="width:112.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+  padding:0in 5.35pt 0in 5.35pt;height:.2in" width="150">
+  <p class="MsoNormal"><b><span style="font-size:10.0pt" lang="EN-GB">{{ans["Comment on section23"]}}</span></b></p>
+  </td>
+ </tr>
+
+
 
 
 
