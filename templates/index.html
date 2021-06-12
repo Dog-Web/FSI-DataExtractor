@@ -1470,16 +1470,22 @@
   <td colspan="4" style="width:37.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="49">
-  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB">&#9989</span></p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["valid S2Q1"]=="selected" %}
+        <span id="valid S2Q1" class="valid" style="font-size:10.0pt" align="center">✅</span> 
+    {% else %}
+        <span id="valid S2Q1" >☐</span>
+    {%endif%}
+  </p>
   </td>
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["Cargo Ship Safety Equipment Certificate"]=="selected" %}
-        <div id="S2Q1" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S2Q1" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["Cargo Ship Safety Equipment Certificate"]=="unselected" %}
-        <div id="S2Q1" >&#9744;</div>
+        <span id="S2Q1" >&#9744;</span>
     {%endif%}
   
   
@@ -1520,16 +1526,23 @@
   <td colspan="4" style="width:37.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="49">
-  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB">&#9989</span></p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["valid S2Q2"]=="selected" %}
+        <span id="valid S2Q2" class="valid" style="font-size:10.0pt" align="center">✅</span> 
+    {% else %}
+        <span id="valid S2Q2" >☐</span>
+    {%endif%}
+  
+  </p>
   </td>
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["Cargo Ship Safety Construction Certificate"]=="selected" %}
-        <div id="S2Q2" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S2Q2" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["Cargo Ship Safety Construction Certificate"]=="unselected" %}
-        <div id="S2Q2" >&#9744;</div>
+        <span id="S2Q2" >&#9744;</span>
     {%endif%}
   
   
@@ -1542,9 +1555,9 @@
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["NA Cargo Ship Safety Construction Certificate"]=="selected" %}
-        <div id="NA S2Q2" class="NA" style="font-size:20.0pt">&#9746;</div> 
+        <span id="NA S2Q2" class="NA" style="font-size:20.0pt">&#9746;</span> 
     {% elif ans["NA Cargo Ship Safety Construction Certificate"]=="unselected" %}
-        <div id="NA S2Q2" >&#9744;</div>
+        <span id="NA S2Q2" >&#9744;</span>
     {%endif%}
   
   </p>
@@ -1574,16 +1587,22 @@
   <td colspan="4" style="width:37.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="49">
-  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB">&#9989</span></p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["valid S2Q3"]=="selected" %}
+        <span id="valid S2Q3" class="valid" style="font-size:10.0pt" align="center">✅</span> 
+    {% else %}
+        <span id="valid S2Q3" >☐</span>
+    {%endif%}
+  </p>
   </td>
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["Cargo Ship Safety Radio Certificate"]=="selected" %}
-        <div id="S2Q3" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S2Q3" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["Cargo Ship Safety Radio Certificate"]=="unselected" %}
-        <div id="S2Q3" >&#9744;</div>
+        <span id="S2Q3" >&#9744;</span>
     {%endif%}
   
   
@@ -1594,9 +1613,9 @@
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["NA Cargo Ship Safety Radio Certificate"]=="selected" %}
-        <div id="NA S2Q3" class="NA" style="font-size:20.0pt">&#9746;</div> 
+        <span id="NA S2Q3" class="NA" style="font-size:20.0pt">&#9746;</span> 
     {% elif ans["NA Cargo Ship Safety Radio Certificate"]=="unselected" %}
-        <div id="NA S2Q3" >&#9744;</div>
+        <span id="NA S2Q3" >&#9744;</span>
     {%endif%}
   
   </p>
@@ -1609,7 +1628,7 @@
  </tr>
 
 
-
+<!--Data Row 4 -->
 
 
 
@@ -1655,9 +1674,9 @@
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" valign="center">
     {% if ans["NA ILL"]=="selected" %}
-        <div id="NA S2Q4" class="NA" style="font-size:20.0pt">&#9746;</div> 
+        <span id="NA S2Q4" class="NA" style="font-size:20.0pt">&#9746;</span> 
     {% elif ans["NA ILL"]=="unselected" %}
-        <div id="NA S2Q4" >&#9744;</div>
+        <span id="NA S2Q4" >&#9744;</span>
     {%endif%}
   
   </p>
