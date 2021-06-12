@@ -1955,11 +1955,11 @@
   <td colspan="4" style="width:37.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="49">
-  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB" align="center">
+  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB">
     {% if ans["valid S2Q10"]=="selected" %}
-        <div id="valid S2Q10" class="valid" style="font-size:10.0pt">✅</div> 
+        <span id="valid S2Q10" class="valid" style="font-size:10.0pt" align="center">✅</span> 
     {% else %}
-        <div id="valid S2Q10" >☐</div>
+        <span id="valid S2Q10" >☐</span>
     {%endif%}
   
   </span></p>
@@ -1997,6 +1997,79 @@
   </td>
  </tr>
 
+ <!-- Row 11 -->
+
+
+
+ <tr style="height:.2in">
+  <td style="width:30.8pt;border-top:none;border-left:solid windowtext 2.25pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.35pt 0in 5.35pt;height:.2in" width="41">
+  <p class="MsoNormal" style="text-align:center" align="center"><b><span style="font-size:10.0pt" lang="EN-GB">11</span></b></p>
+  </td>
+  <td colspan="9" style="width:314.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.35pt 0in 5.35pt;height:.2in" width="420">
+  <p class="MsoNormal"><span style="font-size:10.0pt" lang="EN-GB">Document of Compliance (DOC)&nbsp; <i>valid for Ship Type</i> </span>
+  {% if ans["DOC valid for ship type"]=="selected" %}
+        <span id="DOC valid for ship type" style="font-size:10.0pt">✅</span> 
+    {% else %}
+    <span id="DOC valid for ship type" style="font-size:20.0pt">☐</span>
+    {%endif%}
+  
+  <span style="font-size:10.0pt" lang="EN-GB">Y &nbsp;</span><span style="font-size:10.0pt" lang="EN-GB">
+    {% if ans["DOC invalid for ship type"]=="selected" %}
+        <span id="DOC invalid for ship type" class="invalid" style="font-size:10.0pt">❌</span> 
+    {% else %}
+    <span id="DOC invalid for ship type" style="font-size:20.0pt">☐</span>
+    {%endif%}
+  
+  N&nbsp;&nbsp; </span></p>
+  </td>
+  <td colspan="4" style="width:37.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.35pt 0in 5.35pt;height:.2in" width="49">
+  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB" align="center">
+    {% if ans["valid S2Q11"]=="selected" %}
+        <div id="valid S2Q11" class="valid" style="font-size:10.0pt">✅</div> 
+    {% else %}
+        <div id="valid S2Q11" >☐</div>
+    {%endif%}
+  
+  </span></p>
+  </td>
+  <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["DOC"]=="selected" %}
+        <span id="DOC" class="invalid" style="font-size:10.0pt">❌</span> 
+    {% else %}
+    <span id="DOC">☐</span>
+    {%endif%}
+  
+  
+  </p>
+  </td>
+  <td colspan="3" style="width:27.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["NA DOC"]=="selected" %}
+        <span id="NA DOC" class="NA" style="font-size:20.0pt">☒</span> 
+    {% else %}
+    <span id="NA DOC">☐</span>
+    {%endif%}
+  
+  
+  </p>
+  </td>
+  <td colspan="5" style="width:112.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+  padding:0in 5.35pt 0in 5.35pt;height:.2in" width="150">
+  <p class="MsoNormal"><b><span style="font-size:10.0pt" lang="EN-GB">{{ans["Comment on section210"]}}</span></b></p>
+  </td>
+ </tr>
  
 
 
