@@ -1628,16 +1628,23 @@
   <td colspan="4" style="width:37.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="49">
-  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB">&#9989</span></p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["valid S2Q4"]=="selected" %}
+        <span id="valid S2Q4" class="valid" style="font-size:10.0pt" align="center">✅</span> 
+    {% else %}
+        <span id="valid S2Q4" >☐</span>
+    {%endif%}
+  
+  </p>
   </td>
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" align="center" valign="center">
     {% if ans["ILL"]=="selected" %}
-        <div id="S2Q4" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S2Q4" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["ILL"]=="unselected" %}
-        <div id="S2Q4" >&#9744;</div>
+        <span id="S2Q4" >&#9744;</span>
     {%endif%}
   
   
@@ -1663,6 +1670,8 @@
  </tr>
 
 
+<!-- Row 5 -->
+
  <tr style="height:.2in">
   <td style="width:30.8pt;border-top:none;border-left:solid windowtext 2.25pt;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1677,16 +1686,23 @@
   <td colspan="4" style="width:37.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="49">
-  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB">&#9989</span></p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["valid S2Q5"]=="selected" %}
+        <span id="valid S2Q5" class="valid" style="font-size:10.0pt" align="center">✅</span> 
+    {% else %}
+        <span id="valid S2Q5" >☐</span>
+    {%endif%}
+  
+  </p>
   </td>
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" align="center" valign="center" halign="center">
     {% if ans["IOPP"]=="selected" %}
-        <div id="S2Q5" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S2Q5" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["IOPP"]=="unselected" %}
-        <div id="S2Q5" >&#9744;</div>
+        <span id="S2Q5" >&#9744;</span>
     {%endif%}
   
   
@@ -1697,9 +1713,9 @@
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" valign="center" halign="center">
     {% if ans["NA IOPP"]=="selected" %}
-        <div id="NA S2Q5" class="NA" style="font-size:20.0pt">&#9746;</div> 
+        <span id="NA S2Q5" class="NA" style="font-size:20.0pt">&#9746;</span> 
     {% elif ans["NA IOPP"]=="unselected" %}
-        <div id="NA S2Q5" >&#9744;</div>
+        <span id="NA S2Q5" >&#9744;</span>
     {%endif%}
   
   </p>
@@ -1726,16 +1742,23 @@
   <td colspan="4" style="width:37.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="49">
-  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB">&#9989</span></p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["valid S2Q6"]=="selected" %}
+        <span id="valid S2Q6" class="valid" style="font-size:10.0pt" align="center">✅</span> 
+    {% else %}
+        <span id="valid S2Q6" >☐</span>
+    {%endif%}
+  
+  </p>
   </td>
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" align="center" valign="center" halign="center">
     {% if ans["IAPP"]=="selected" %}
-        <div id="S2Q6" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S2Q6" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["IAPP"]=="unselected" %}
-        <div id="S2Q6" >&#9744;</div>
+        <span id="S2Q6" >&#9744;</span>
     {%endif%}
   
   
@@ -1746,9 +1769,9 @@
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" valign="center" halign="center">
     {% if ans["NA IAPP"]=="selected" %}
-        <div id="NA S2Q6" class="NA" style="font-size:20.0pt">&#9746;</div> 
+        <span id="NA S2Q6" class="NA" style="font-size:20.0pt">&#9746;</span> 
     {% elif ans["NA IAPP"]=="unselected" %}
-        <div id="NA S2Q6" >&#9744;</div>
+        <span id="NA S2Q6" >&#9744;</span>
     {%endif%}
   
   </p>
@@ -1774,16 +1797,24 @@
   <td colspan="4" style="width:37.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="49">
-  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB">&#9989</span></p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["valid S2Q7"]=="selected" %}
+        <span id="valid S2Q7" class="valid" style="font-size:10.0pt" align="center">✅</span> 
+    {% else %}
+        <span id="valid S2Q7" >☐</span>
+    {%endif%}
+  
+  
+  </p>
   </td>
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" align="center" valign="center" halign="center">
     {% if ans["ISPP"]=="selected" %}
-        <div id="S2Q7" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S2Q7" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["ISPP"]=="unselected" %}
-        <div id="S2Q7" >&#9744;</div>
+        <span id="S2Q7" >&#9744;</span>
     {%endif%}
   
   
@@ -1794,9 +1825,9 @@
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" valign="center" halign="center">
     {% if ans["NA ISPP"]=="selected" %}
-        <div id="NA S2Q7" class="NA" style="font-size:20.0pt">&#9746;</div> 
+        <span id="NA S2Q7" class="NA" style="font-size:20.0pt">&#9746;</span> 
     {% elif ans["NA ISPP"]=="unselected" %}
-        <div id="NA S2Q7" >&#9744;</div>
+        <span id="NA S2Q7" >&#9744;</span>
     {%endif%}
   
   </p>
@@ -1823,16 +1854,23 @@
   <td colspan="4" style="width:37.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="49">
-  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB">&#9989</span></p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["valid S2Q8"]=="selected" %}
+        <span id="valid S2Q8" class="valid" style="font-size:10.0pt" align="center">✅</span> 
+    {% else %}
+        <span id="valid S2Q8" >☐</span>
+    {%endif%}
+  
+  </p>
   </td>
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" align="center" valign="center" halign="center">
     {% if ans["ISSC"]=="selected" %}
-        <div id="S2Q8" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S2Q8" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["ISSC"]=="unselected" %}
-        <div id="S2Q8" >&#9744;</div>
+        <span id="S2Q8" >&#9744;</span>
     {%endif%}
   
   
@@ -1843,9 +1881,9 @@
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" valign="center" halign="center">
     {% if ans["NA ISSC"]=="selected" %}
-        <div id="NA S2Q8" class="NA" style="font-size:20.0pt">&#9746;</div> 
+        <span id="NA S2Q8" class="NA" style="font-size:20.0pt">&#9746;</span> 
     {% elif ans["NA ISSC"]=="unselected" %}
-        <div id="NA S2Q8" >&#9744;</div>
+        <span id="NA S2Q8" >&#9744;</span>
     {%endif%}
   
   </p>
@@ -1868,7 +1906,7 @@
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="420">
   <span style="font-size:10.0pt" lang="EN-GB">Maritime Labour
-  Certificate (MLC)&nbsp;&nbsp;&nbsp;   </span><span class="MsoNormal">
+  Certificate (MLC)&nbsp;&nbsp;&nbsp;   </span><BR></BR><span class="MsoNormal">
   
   {% if ans["DMLC I"]=="selected" %}
         <span id="DMLC I" style="font-size:20.0pt">&#9746;</span> 
@@ -1888,16 +1926,23 @@
   <td colspan="4" style="width:37.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="49">
-  <p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:10.0pt" lang="EN-GB">&#9989</span></p>
+  <p class="MsoNormal" style="text-align:center" align="center">
+    {% if ans["valid S2Q9"]=="selected" %}
+        <span id="valid S2Q9" class="valid" style="font-size:10.0pt" align="center">✅</span> 
+    {% else %}
+        <span id="valid S2Q9" >☐</span>
+    {%endif%}
+  
+  </p>
   </td>
   <td colspan="2" style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["MLC"]=="selected" %}
-        <div id="S2Q9" class="invalid" style="font-size:10.0pt">❌</div> 
+        <span id="S2Q9" class="invalid" style="font-size:10.0pt">❌</span> 
     {% elif ans["MLC"]=="unselected" %}
-        <div id="S2Q9" >&#9744;</div>
+        <span id="S2Q9" >&#9744;</span>
     {%endif%}
   
   
@@ -1908,9 +1953,9 @@
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="36">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["NA MLC"]=="selected" %}
-        <div id="NA S2Q9" class="NA" style="font-size:20.0pt">&#9746;</div> 
+        <span id="NA S2Q9" class="NA" style="font-size:20.0pt">&#9746;</span> 
     {% elif ans["NA MLC"]=="unselected" %}
-        <div id="NA S2Q9" >&#9744;</div>
+        <span id="NA S2Q9" >&#9744;</span>
     {%endif%}
   </p>
   </td>
@@ -1936,7 +1981,7 @@
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="420">
   <p class="MsoNormal"><span style="font-size:10.0pt" lang="EN-GB">Safety
-  Management Certificate (SMC)&nbsp; <i>valid for Ship Type</i> </span>
+  Management Certificate (SMC)&nbsp;<BR></BR> <i>valid for Ship Type</i> </span>
   {% if ans["SMC valid for ship type"]=="selected" %}
         <span id="SMC valid for ship type" style="font-size:10.0pt">✅</span> 
     {% else %}
@@ -1947,7 +1992,7 @@
     {% if ans["SMC invalid for ship type"]=="selected" %}
         <span id="SMC invalid for ship type" class="invalid" style="font-size:10.0pt">❌</span> 
     {% else %}
-    <span id="SMC valid for ship type" style="font-size:20.0pt">☐</span>
+    <span id="SMC invalid for ship type" style="font-size:20.0pt">☐</span>
     {%endif%}
   
   N&nbsp;&nbsp; </span></p>
@@ -2010,7 +2055,7 @@
   <td colspan="9" style="width:314.7pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:.2in" width="420">
-  <p class="MsoNormal"><span style="font-size:10.0pt" lang="EN-GB">Document of Compliance (DOC)&nbsp; <i>valid for Ship Type</i> </span>
+  <p class="MsoNormal"><span style="font-size:10.0pt" lang="EN-GB">Document of Compliance (DOC)&nbsp; <BR></BR><i>valid for Ship Type</i> </span>
   {% if ans["DOC valid for ship type"]=="selected" %}
         <span id="DOC valid for ship type" style="font-size:10.0pt">✅</span> 
     {% else %}
