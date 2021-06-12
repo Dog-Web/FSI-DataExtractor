@@ -17,7 +17,7 @@ key = "b1786032cc014d0f9c4cd24530e3fb6d"
 form_recognizer_client = FormRecognizerClient(endpoint, AzureKeyCredential(key))
 form_training_client = FormTrainingClient(endpoint, AzureKeyCredential(key))
 formUrl="https://fsi2.blob.core.windows.net/trainimages/FSI%20-%20DENSA%20SHARK%20-%2020.07.2020.pdf?sp=r&st=2021-05-15T07:46:30Z&se=2022-05-15T15:46:30Z&spr=https&sv=2020-02-10&sr=b&sig=j6Hfe9DeLN5eaLjMxDcMu6l8kQzciglHRcm4NOlUswI%3D"
-poller = form_recognizer_client.begin_recognize_custom_forms_from_url(model_id="ca9bb8ab-a0ff-42a5-99e8-6ba5efe2f1e8", form_url=formUrl)
+poller = form_recognizer_client.begin_recognize_custom_forms_from_url(model_id="ff78f398-3064-4a08-8866-cea29f5b4a50", form_url=formUrl)
 result = poller.result()
 tags=[]
 values=[]
