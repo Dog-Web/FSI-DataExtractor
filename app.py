@@ -58,7 +58,7 @@ def hello():
         key = "b1786032cc014d0f9c4cd24530e3fb6d"
         form_recognizer_client = FormRecognizerClient(endpoint, AzureKeyCredential(key))
         form_training_client = FormTrainingClient(endpoint, AzureKeyCredential(key))
-        poller = form_recognizer_client.begin_recognize_custom_forms_from_url(model_id="ca9bb8ab-a0ff-42a5-99e8-6ba5efe2f1e8", form_url=formUrl)
+        poller = form_recognizer_client.begin_recognize_custom_forms_from_url(model_id = "ff78f398-3064-4a08-8866-cea29f5b4a50", form_url=formUrl)
         result = poller.result()
         tags=[]
         values=[]
