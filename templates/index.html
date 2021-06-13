@@ -103,139 +103,13 @@ header .navigation .menu-list li a {
   text-decoration: none;
 }
 
-/* ====================
-  Intro Section
-=======================*/
-
-@keyframes revealNextWord {
-  0% { 
-    opacity: 0.3; 
-    height: 0.0; 
-  }
-  10% { 
-    opacity: 1; 
-    height:1.2em; 
-  }
-  20% { 
-    opacity: 1; 
-    height:1.2em; 
-  }
-  28% { 
-    opacity: 0; 
-    height:2em; 
-  }
-  
-}
-
-.intro-section .intro-content .header-btn a{
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: #3498db;
-  background-color: #b1d4e0;
-  padding: 15px;
-  border-radius: 5px;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  text-transform: uppercase;
-}
-
-.intro-section .intro-content .header-btn a:before{
-	position: absolute;
-  content: ""; 
-  top: 0px;
-  height: 100%;
-  left: -25%;
-  width: 0%;
-  background-color: #3498db;
-  transform: skew(50deg);
-  transition-duration: 1s;
-  z-index: 1;
-}
-
-.intro-section .intro-content .header-btn a:hover{
-  color: #b1d4e0;
-}
-
-.intro-section .intro-content .header-btn a:hover:before{
-  width: 170%;
-
-}
-
-.intro-section .intro-content .header-btn a span{
-	position: relative;
-	z-index: 9;
-}
-
-/* ====================
-  Responsive Section
-=======================*/
-
-/* Tablet desktop :768px. */
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  header .navigation .menu-list {
-    width: 60%;
-  }
-
-  header .navigation .menu-list li a{
-    font-size: 1rem;
-  }
-
-}
-
-/* Large Mobile :480px. */
-
-@media only screen and (max-width: 767px) {
-
-  header .navigation .menu-list {
-    position: absolute;
-    top: 12vh;
-    min-width: 100%;
-    background: rgba(15, 20, 35, 0.99);
-    text-align: center;
-    display: none;
-  }
-
-  header .navigation .menu-list li {
-    display: block;
-  }
-
-  header .navigation .menu-list li a {
-    display: block;
-    padding: 20px;
-    transition: color 1s ease, padding 1s ease, background-color 1s ease;
-
-  }
-
-  header .navigation .menu-list li a:hover{
-    color: #b1d4e0;
-    padding-left: 30px;
-    background: rgba(177, 212, 224, 0.2);
-  }
-
-
-  header .navigation .humbarger{
-    display: block;
-  }
 
 
 
-/* small mobile :320px. */
 
-@media only screen and (max-width: 479px) {
 
-  .intro-inner .intro-content h1 {
-    font-size: 2rem;
-    letter-spacing: 1px;
-  }
 
-  .intro-inner .intro-content p {
-    margin-top: 10px;
-  }
 
-}
-  
   
  
         
@@ -994,7 +868,7 @@ header .navigation .menu-list li a {
 			
 			<!-- Navigation -->
 			<ul class="menu-list">
-				<li class="fa">Invalids<span class='badge badge-warning' id='lblCartCount'> 5 </span></li>
+				<li class="fa"><a>Invalids<span class='badge badge-warning' id='lblCartCount'> 5 </span></a></li>
 				<li><a href="#">Ambiguities</a></li>
 				<li><a href="#">Actions</a></li>
 				<li><a href="#portfolio">function1</a></li>
