@@ -14,6 +14,230 @@
             padding: 20px;
             background: #f0e68c;
         }
+
+        *{
+  margin: 0;
+  padding: 0;
+	box-sizing: border-box;
+}
+
+html,body{
+  min-width: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header .navigation {
+    border-radius: 50px;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 12vh;
+  min-width: 100%;
+  z-index: 10;
+  background: #0f1423;
+  border-bottom: 2px solid #0c2d48;
+}
+
+header .navigation .logo{
+  margin-left: 20px;
+}
+
+header .navigation .logo h1{
+  color: #b1d4e0;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+header .navigation .menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  margin: auto 20px auto 0;
+}
+
+header .navigation .humbarger {
+  margin-right: 20px;
+  display: none;
+ }
+ 
+header .navigation .humbarger .bar{
+  width: 30px;
+  height: 2px;
+  margin: 7px;
+  background: #b1d4e0;
+ }
+ 
+  .badge {
+  padding-left: 3px;
+  padding-right: 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 28px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
+}
+#lblCartCount {
+    font-size: 13px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px; 
+}  
+  
+header .navigation .menu-list li a {
+  color: #b1d4e0;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 1s ease, border 1s ease;
+  text-decoration: none;
+}
+
+/* ====================
+  Intro Section
+=======================*/
+
+@keyframes revealNextWord {
+  0% { 
+    opacity: 0.3; 
+    height: 0.0; 
+  }
+  10% { 
+    opacity: 1; 
+    height:1.2em; 
+  }
+  20% { 
+    opacity: 1; 
+    height:1.2em; 
+  }
+  28% { 
+    opacity: 0; 
+    height:2em; 
+  }
+  
+}
+
+.intro-section .intro-content .header-btn a{
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #3498db;
+  background-color: #b1d4e0;
+  padding: 15px;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.intro-section .intro-content .header-btn a:before{
+	position: absolute;
+  content: ""; 
+  top: 0px;
+  height: 100%;
+  left: -25%;
+  width: 0%;
+  background-color: #3498db;
+  transform: skew(50deg);
+  transition-duration: 1s;
+  z-index: 1;
+}
+
+.intro-section .intro-content .header-btn a:hover{
+  color: #b1d4e0;
+}
+
+.intro-section .intro-content .header-btn a:hover:before{
+  width: 170%;
+
+}
+
+.intro-section .intro-content .header-btn a span{
+	position: relative;
+	z-index: 9;
+}
+
+/* ====================
+  Responsive Section
+=======================*/
+
+/* Tablet desktop :768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  header .navigation .menu-list {
+    width: 60%;
+  }
+
+  header .navigation .menu-list li a{
+    font-size: 1rem;
+  }
+
+}
+
+/* Large Mobile :480px. */
+
+@media only screen and (max-width: 767px) {
+
+  header .navigation .menu-list {
+    position: absolute;
+    top: 12vh;
+    min-width: 100%;
+    background: rgba(15, 20, 35, 0.99);
+    text-align: center;
+    display: none;
+  }
+
+  header .navigation .menu-list li {
+    display: block;
+  }
+
+  header .navigation .menu-list li a {
+    display: block;
+    padding: 20px;
+    transition: color 1s ease, padding 1s ease, background-color 1s ease;
+
+  }
+
+  header .navigation .menu-list li a:hover{
+    color: #b1d4e0;
+    padding-left: 30px;
+    background: rgba(177, 212, 224, 0.2);
+  }
+
+
+  header .navigation .humbarger{
+    display: block;
+  }
+
+
+
+/* small mobile :320px. */
+
+@media only screen and (max-width: 479px) {
+
+  .intro-inner .intro-content h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .intro-inner .intro-content p {
+    margin-top: 10px;
+  }
+
+}
+  
+  
+ 
         
     </style>
 </head>
@@ -759,7 +983,40 @@
         </head>
         
         <body style="word-wrap:break-word; background-color:rgb(245, 250, 254)" vlink="purple" link="blue" lang="EN-US">
-        
+            <!--====== Header Section Start ======-->
+	<header>
+		<nav class="navigation">
+
+			<!-- Logo -->
+			<div class="logo">
+				<h1>Cyber Waves</h1>
+			</div>
+			
+			<!-- Navigation -->
+			<ul class="menu-list">
+				<li class="fa">Invalids<span class='badge badge-warning' id='lblCartCount'> 5 </span></li>
+				<li><a href="#">Ambiguities</a></li>
+				<li><a href="#">Actions</a></li>
+				<li><a href="#portfolio">function1</a></li>
+				<li><a href="#">function2</a></li>
+       
+			</ul>
+
+			
+		</nav>
+    
+    
+		
+				
+	</header>
+
+
+
+
+
+
+
+
         <div class="WordSection1">
         <div class="container">
         <table class="MsoNormalTable" style="margin: auto;border-collapse:collapse" width="732" cellspacing="0" cellpadding="0" border="0">
