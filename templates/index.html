@@ -1146,25 +1146,25 @@ header .navigation .menu-list li a {
   <td style="width:22.5pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:14.15pt" width="30" valign="top">
-  <p class="MsoNormal"><a name="Check3"><span style="font-size:10.0pt" align:"center" lang="EN-GB">
+  <p class="MsoNormal" align="center">
   
-    {% if ans["Certificate of Registry"]=="unselected" %}
-        <div id="valid S1Q1" style="font-size:10.0pt">&#9989</div> 
-    {% elif ans["Certificate of Registry"]=="selected" %}
-        <div id="valid S1Q1" >&#9744;</div>
+    {% if ans["valid S1Q1"]=="selected" %}
+        <span id="valid S1Q1" style="font-size:10.0pt">&#9989</span> 
+    {% elif ans["valid S1Q1"]=="unselected" %}
+        <span id="valid S1Q1" >&#9744;</span>
     {%endif%}
   
   
-  </span></a></p>
+  </p>
   </td>
   <td style="width:22.5pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.35pt 0in 5.35pt;
   height:14.15pt" width="30" valign="top">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["Certificate of Registry"]=="selected" %}
-        <div id="S1Q1" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S1Q1" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["Certificate of Registry"]=="unselected" %}
-        <div id="S1Q1" >&#9744;</div>
+        <span id="S1Q1" >&#9744;</span>
     {%endif%}
   
   </p>
@@ -1182,15 +1182,15 @@ header .navigation .menu-list li a {
   <td style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:14.15pt" width="36" valign="top">
-  <p class="MsoNormal"><span style="font-size:10.0pt" lang="EN-GB">
+  <p class="MsoNormal" align="center">
   
-    {% if ans["MS Notices File"]=="unselected" %}
-        <div id="valid S1Q6" style="font-size:10.0pt">&#9989</div> 
-    {% elif ans["MS Notices File"]=="selected" %}
-        <div id="valid S1Q6" >&#9744;</div>
+    {% if ans["valid S1Q2"]=="selected" %}
+        <span id="valid S1Q6" style="font-size:10.0pt">&#9989</span> 
+    {% elif ans["valid S1Q2"]=="unselected" %}
+        <span id="valid S1Q6" >&#9744;</span>
     {%endif%}
 
-  </span></p>
+  </p>
   </td>
   <td style="width:24.0pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;padding:0in 5.35pt 0in 5.35pt;
@@ -1198,9 +1198,9 @@ header .navigation .menu-list li a {
   <p class="MsoNormal" style="text-align:center" align="center">
    
     {% if ans["MS Notices File"]=="selected" %}
-        <div id="S1Q6" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S1Q6" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["MS Notices File"]=="unselected" %}
-        <div id="S1Q6" >&#9744;</div>
+        <span id="S1Q6" >&#9744;</span>
     {%endif%}
 
 
@@ -1231,16 +1231,16 @@ header .navigation .menu-list li a {
   <td style="width:22.5pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:14.15pt" width="30" valign="top">
-  <p class="MsoNormal"><span style="font-size:10.0pt" lang="EN-GB">
+  <p class="MsoNormal" align="center">
   
-    {% if ans["Articles of Agreement (Valid 1 yr)"]=="unselected" %}
-        <div id="valid S1Q2" style="font-size:10.0pt">&#9989</div> 
-    {% elif ans["Articles of Agreement (Valid 1 yr)"]=="selected" %}
-        <div id="valid S1Q2" >&#9744;</div>
+    {% if ans["valid S1Q2"]=="selected" %}
+        <span id="valid S1Q2" style="font-size:10.0pt">&#9989</span> 
+    {% elif ans["valid S1Q2"]=="unselected" %}
+        <span id="valid S1Q2" >&#9744;</span>
     {%endif%}
   
   
-  </span></p>
+  </p>
   </td>
   <td style="width:22.5pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.35pt 0in 5.35pt;
@@ -1248,9 +1248,9 @@ header .navigation .menu-list li a {
   <p class="MsoNormal" style="text-align:center" align="center">
   
     {% if ans["Articles of Agreement (Valid 1 yr)"]=="selected" %}
-        <div id="S1Q2" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S1Q2" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["Articles of Agreement (Valid 1 yr)"]=="unselected" %}
-        <div id="S1Q2" >&#9744;</div>
+        <span id="S1Q2" >&#9744;</span>
     {%endif%}
   
 
@@ -1272,17 +1272,17 @@ header .navigation .menu-list li a {
   <td style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:14.15pt" width="36" valign="top">
-  <p class="MsoNormal"><span style="font-size:10.0pt" lang="EN-GB">
+  <p class="MsoNormal" align="center">
   
-    {% if ans["Technical Notices"]=="unselected" %}
-        <div id="valid S1Q7" style="font-size:10.0pt">&#9989</div> 
-    {% elif ans["Technical Notices"]=="selected" %}
-        <div id="valid S1Q7" >&#9744;</div>
+    {% if ans["valid S1Q7"]=="selected" %}
+        <span id="valid S1Q7" style="font-size:10.0pt">&#9989</span> 
+    {% elif ans["valid S1Q7"]=="unselected" %}
+        <span id="valid S1Q7" >&#9744;</span>
     {%endif%}
   
   
   
-  </span></p>
+  </p>
   </td>
   <td style="width:24.0pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;padding:0in 5.35pt 0in 5.35pt;
@@ -1290,9 +1290,9 @@ header .navigation .menu-list li a {
   <p class="MsoNormal" style="text-align:center" align="center">
   
     {% if ans["Technical Notices"]=="selected" %}
-        <div id="S1Q7" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S1Q7" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["Technical Notices"]=="unselected" %}
-        <div id="S1Q7" >&#9744;</div>
+        <span id="S1Q7" >&#9744;</span>
     {%endif%}
   
   
@@ -1318,25 +1318,25 @@ header .navigation .menu-list li a {
   <td style="width:22.5pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:14.15pt" width="30" valign="top">
-  <p class="MsoNormal"><span style="font-size:10.0pt" lang="EN-GB" align="center">
+  <p class="MsoNormal" align="center">
   
-    {% if ans["Minimum Safe Manning Certificate"]=="unselected" %}
-        <div id="valid S1Q3" style="font-size:10.0pt">&#9989</div> 
-    {% elif ans["Minimum Safe Manning Certificate"]=="selected" %}
-        <div id="valid S1Q3" >&#9744;</div>
+    {% if ans["valid S1Q3"]=="selected" %}
+        <span id="valid S1Q3" style="font-size:10.0pt">&#9989</span> 
+    {% elif ans["valid S1Q3"]=="unselected" %}
+        <span id="valid S1Q3" >&#9744;</span>
     {%endif%}
   
   
-  </span></p>
+  </p>
   </td>
   <td style="width:22.5pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.35pt 0in 5.35pt;
   height:14.15pt" width="30" valign="top">
   <p class="MsoNormal" align="center">
     {% if ans["Minimum Safe Manning Certificate"]=="selected" %}
-        <div id="S1Q3" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S1Q3" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["Minimum Safe Manning Certificate"]=="unselected" %}
-        <div id="S1Q3" >&#9744;</div>
+        <span id="S1Q3" >&#9744;</span>
     {%endif%}
   
   </p>
@@ -1355,26 +1355,26 @@ header .navigation .menu-list li a {
   <td style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:14.15pt" width="36" valign="top">
-  <p class="MsoNormal"><span style="font-size:10.0pt" lang="EN-GB">
+  <p class="MsoNormal" align="center">
   
 
-    {% if ans["Merchant Shipping Act (Cap 234)"]=="unselected" %}
-        <div id="valid S1Q8" style="font-size:10.0pt">&#9989</div> 
-    {% elif ans["Merchant Shipping Act (Cap 234)"]=="selected" %}
-        <div id="valid S1Q8" >&#9744;</div>
+    {% if ans["valid S1Q8"]=="selected" %}
+        <span id="valid S1Q8" style="font-size:10.0pt">&#9989</span> 
+    {% elif ans["valid S1Q8"]=="unselected" %}
+        <span id="valid S1Q8" >&#9744;</span>
     {%endif%}
 
   
-  </span></p>
+  </p>
   </td>
   <td style="width:24.0pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;padding:0in 5.35pt 0in 5.35pt;
   height:14.15pt" width="32" valign="top">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["Merchant Shipping Act (Cap 234)"]=="selected" %}
-        <div id="S1Q8" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S1Q8" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["Merchant Shipping Act (Cap 234)"]=="unselected" %}
-        <div id="S1Q8" >&#9744;</div>
+        <span id="S1Q8" >&#9744;</span>
     {%endif%}
   
   </p>
@@ -1402,16 +1402,16 @@ header .navigation .menu-list li a {
   <td style="width:22.5pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:14.15pt" width="30" valign="top">
-  <p class="MsoNormal"><span style="font-size:10.0pt" lang="EN-GB">
+  <p class="MsoNormal" align="center">
   
-    {% if ans["Radio Station License"]=="unselected" %}
-        <div id="valid S1Q4" style="font-size:10.0pt">&#9989</div> 
-    {% elif ans["Radio Station License"]=="selected" %}
-        <div id="valid S1Q4" >&#9744;</div>
+    {% if ans["valid S1Q4"]=="selected" %}
+        <span id="valid S1Q4" style="font-size:10.0pt">&#9989</span> 
+    {% elif ans["valid S1Q4"]=="unselected" %}
+        <span id="valid S1Q4" >&#9744;</span>
     {%endif%}
 
   
-  </span></p>
+  </p>
   </td>
   <td style="width:22.5pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.35pt 0in 5.35pt;
@@ -1419,9 +1419,9 @@ header .navigation .menu-list li a {
   <p class="MsoNormal" style="text-align:center" align="center">
     <!-- This is for invalid/wrong indication holder ,copy paste it everywhere -->
     {% if ans["Radio Station License"]=="selected" %}
-        <div id="S1Q4" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S1Q4" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["Radio Station License"]=="unselected" %}
-        <div id="S1Q4" >&#9744;</div>
+        <span id="S1Q4" >&#9744;</span>
     {%endif%}
 
   
@@ -1443,27 +1443,27 @@ header .navigation .menu-list li a {
   <td style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:14.15pt" width="36" valign="top">
-  <p class="MsoNormal"><span style="font-size:10.0pt" lang="EN-GB">
+  <p class="MsoNormal" align="center">
   
 
-    {% if ans["MS Act Subsidiary Legislation"]=="unselected" %}
-        <div id="valid S1Q9" style="font-size:10.0pt">&#9989</div> 
-    {% elif ans["MS Act Subsidiary Legislation"]=="selected" %}
-        <div id="valid S1Q9" >&#9744;</div>
+    {% if ans["valid S1Q9"]=="selected" %}
+        <span id="valid S1Q9" style="font-size:10.0pt">&#9989</span> 
+    {% elif ans["valid S1Q9"]=="unselected" %}
+        <span id="valid S1Q9" >&#9744;</span>
     {%endif%}
 
 
   
-  </span></p>
+  </p>
   </td>
   <td style="width:24.0pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;padding:0in 5.35pt 0in 5.35pt;
   height:14.15pt" width="32">
   <p class="MsoNormal" style="text-align:center" align="center">
     {% if ans["MS Act Subsidiary Legislation"]=="selected" %}
-        <div id="S1Q9" class="invalid" style="font-size:10.0pt">&#10060;</div> 
+        <span id="S1Q9" class="invalid" style="font-size:10.0pt">&#10060;</span> 
     {% elif ans["MS Act Subsidiary Legislation"]=="unselected" %}
-        <div id="S1Q9" >&#9744;</div>
+        <span id="S1Q9" >&#9744;</span>
     {%endif%}
   
   </p>
@@ -1489,15 +1489,15 @@ header .navigation .menu-list li a {
   <td style="width:27.0pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 2.25pt;border-right:solid windowtext 1.0pt;
   padding:0in 5.35pt 0in 5.35pt;height:14.15pt" width="36" valign="top">
-  <p class="MsoNormal"><span style="font-size:10.0pt" lang="EN-GB">
-    {% if ans["Maltese Ships Official Log Book with regular inspection entries for drills/accomodation/LSA/FFE"]=="unselected" %}
-        <div id="valid S1Q5" style="font-size:10.0pt">&#9989</div> 
-    {% elif ans["Maltese Ships Official Log Book with regular inspection entries for drills/accomodation/LSA/FFE"]=="selected" %}
-        <div id="valid S1Q5" >&#9744;</div>
+  <p class="MsoNormal" align="center">
+    {% if ans["valid S1Q5"]=="selected" %}
+        <span id="valid S1Q5" style="font-size:10.0pt">&#9989</div> 
+    {% elif ans["valid S1Q5"]=="unselected" %}
+        <span id="valid S1Q5" >&#9744;</span>
     {%endif%}
   
   
-  </span></p>
+  </p>
   </td>
   <td style="width:24.0pt;border-top:none;border-left:none;border-bottom:
   solid windowtext 2.25pt;border-right:solid windowtext 2.25pt;padding:0in 5.35pt 0in 5.35pt;
@@ -2311,7 +2311,9 @@ header .navigation .menu-list li a {
         
         <script>
         
-            var i;
+            
+
+/*
 for (i = 1; i < 10; i++) {
   var arg="S"+1+"Q"+i;
 
@@ -2321,17 +2323,26 @@ for (i = 1; i < 10; i++) {
                  
                 piece.parentNode.parentNode.style.backgroundColor="#cc3300";
              }
-             else if(piece.innerHTML=="☐"){
-                
-             }
+             
              
 }
+for (i = 1; i < 11; i++) {
+  var arg="S"+2+"Q"+i;
+
+        const piece=document.getElementById(""+arg); 
+             console.log(piece.innerHTML);
+             if(piece.innerHTML=="❌"){
+                 
+                piece.parentNode.parentNode.style.backgroundColor="#cc3300";
+             }
+             
+}*/
 
  var x = document.getElementsByClassName("invalid");
 var i;
-/*for (i = 0; i < x.length; i++) {
-  x[i].parentNode.parentNode.style.backgroundColor = "#cc3300";
-} */   
+for (i = 0; i < x.length; i++) {
+  x[i].parentNode.parentNode.parentNode.style.backgroundColor = "#cc3300";
+}    
 const pse=document.getElementById("lblCartCount");
 pse.innerHTML=x.length;
 
