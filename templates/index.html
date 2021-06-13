@@ -993,7 +993,7 @@ header .navigation .menu-list li a {
           border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
           padding:0in 5.35pt 0in 5.35pt;height:5.55pt" width="356" valign="top">
           <p class="MsoNormal"><b><span style="font-size:9.0pt" lang="EN-GB">Detained last
-          PSC inspection: &nbsp;</span></b><b id="yes Detained last PSC Inspection" style="font-size:10.0pt">{% if ans["Detained last PSC Inspection"]=="selected" %}&#10060; {% elif ans["Detained last PSC Inspection"]=="unselected" %}&#9744{%endif%}</b><b><span style="font-size:10.0pt" lang="EN-GB"><a name="Check1"></a></span></b><b><span style="font-size:9.0pt" lang="EN-GB">Yes</span></b><b><span style="font-size:10.0pt" lang="EN-GB">&nbsp;&nbsp; </span></b><b id="no Detained last PSC Inspection" style="font-size:10.0pt">
+          PSC inspection: &nbsp;</span></b><b id="yes Detained last PSC Inspection" style="font-size:10.0pt">{% if ans["Detained last PSC Inspection"]=="selected" %}❌ {% elif ans["Detained last PSC Inspection"]=="unselected" %}&#9744{%endif%}</b><b><span style="font-size:10.0pt" lang="EN-GB"><a name="Check1"></a></span></b><b><span style="font-size:9.0pt" lang="EN-GB">Yes</span></b><b><span style="font-size:10.0pt" lang="EN-GB">&nbsp;&nbsp; </span></b><b id="no Detained last PSC Inspection" style="font-size:10.0pt">
            {% if ans["Detained last PSC Inspection"]=="unselected" %}
                 &#9989
             {% elif ans["Detained last PSC Inspection"]=="selected" %}
@@ -2310,46 +2310,28 @@ header .navigation .menu-list li a {
         </div>
         
         <script>
-        
-            
 
-/*
-for (i = 1; i < 10; i++) {
-  var arg="S"+1+"Q"+i;
-
-        const piece=document.getElementById(""+arg); 
-             console.log(piece.innerHTML);
-             if(piece.innerHTML=="❌"){
-                 
-                piece.parentNode.parentNode.style.backgroundColor="#cc3300";
+        var x = document.getElementsByClassName("invalid");
+        var i;
+        for (i = 0; i < x.length; i++) {
+        x[i].parentNode.parentNode.parentNode.style.backgroundColor = "#cc3300";
+        }    
+        const pse=document.getElementById("lblCartCount");
+        var invalidsCount=x.length;
+        const detaine=document.getElementById("yes Detained last PSC Inspection"); 
+             if(detaine.innerHTML=="❌"){
+                 invalidsCount += 1;
              }
-             
-             
-}
-for (i = 1; i < 11; i++) {
-  var arg="S"+2+"Q"+i;
 
-        const piece=document.getElementById(""+arg); 
-             console.log(piece.innerHTML);
-             if(piece.innerHTML=="❌"){
-                 
-                piece.parentNode.parentNode.style.backgroundColor="#cc3300";
-             }
-             
-}*/
+        pse.innerHTML=invalidsCount;
 
- var x = document.getElementsByClassName("invalid");
-var i;
-for (i = 0; i < x.length; i++) {
-  x[i].parentNode.parentNode.parentNode.style.backgroundColor = "#cc3300";
-}    
-const pse=document.getElementById("lblCartCount");
-pse.innerHTML=x.length;
+        /* Ambiguity Count     */ 
+       /* for (i = 1; i < 11; i++) {
+            arg += "S" + 2 + "Q"+i;
+            if(document.getElementById("valid "+arg).innerHTML)
 
-
-
-
-            
+            }
+*/
         </script>
         
         
