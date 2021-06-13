@@ -84,6 +84,16 @@ header .navigation .humbarger .bar{
     vertical-align: top;
     margin-left: -10px; 
 }  
+#Ambiguities {
+    font-size: 13px;
+    background: #e9ec17;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+
+
+}
   
 header .navigation .menu-list li a {
   color: #b1d4e0;
@@ -861,7 +871,7 @@ header .navigation .menu-list li a {
 			<!-- Navigation -->
 			<ul class="menu-list">
 				<li class="fa"><a>Invalids<span class='badge badge-warning' id='lblCartCount'> 0 </span></a></li>
-				<li><a href="#">Ambiguities</a></li>
+				<li class="fa"><a href="#">Ambiguities<span class='badge badge-warning' id='Ambiguities'> 0 </span></a></li>
 				<li><a href="#">Actions</a></li>
 				<li><a href="#portfolio">function1</a></li>
 				<li><a href="#">function2</a></li>
@@ -2319,9 +2329,9 @@ for (i = 1; i < 10; i++) {
 
  var x = document.getElementsByClassName("invalid");
 var i;
-for (i = 0; i < x.length; i++) {
+/*for (i = 0; i < x.length; i++) {
   x[i].parentNode.parentNode.style.backgroundColor = "#cc3300";
-}    
+} */   
 const pse=document.getElementById("lblCartCount");
 pse.innerHTML=x.length;
 
