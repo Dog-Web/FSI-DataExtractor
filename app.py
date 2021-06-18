@@ -72,3 +72,6 @@ def hello():
         
        
     return render_template("index.html",rows=data,ans=ans)
+
+if __name__ == '__main__':
+    app.run(debug=False)
