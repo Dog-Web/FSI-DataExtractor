@@ -11,9 +11,26 @@ from azure.core.exceptions import ResourceNotFoundError
 from azure.ai.formrecognizer import FormRecognizerClient
 from azure.ai.formrecognizer import FormTrainingClient
 from azure.core.credentials import AzureKeyCredential
+from werkzeug.utils import secure_filename
+from azure.storage.blob import BlobServiceClient
 app = Flask(__name__)
+
+account = "files121"   # Azure account name
+      # Azure Storage account access key  
+connect_str = os.environ['STORAGE_CONN_STR']
+container = "uploads"
+allowed_ext = set(['txt', 'pdf', 'png', 'jpg', 'jpeg'])
+max_length =  500 * 1024 * 1024  
+blob_service_client = BlobServiceClient.from_connection_string(connect_str)
+
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in allowed_ext
+
+
 endpoint = "https://fsiformrecognizer.cognitiveservices.azure.com/"
-key = "b1786032cc014d0f9c4cd24530e3fb6d"
+key = os.environ['RECOG_KEY']
 form_recognizer_client = FormRecognizerClient(endpoint, AzureKeyCredential(key))
 form_training_client = FormTrainingClient(endpoint, AzureKeyCredential(key))
 formUrl="https://fsi2.blob.core.windows.net/trainimages/FSI%20-%20DENSA%20SHARK%20-%2020.07.2020.pdf?sp=r&st=2021-05-15T07:46:30Z&se=2022-05-15T15:46:30Z&spr=https&sv=2020-02-10&sr=b&sig=j6Hfe9DeLN5eaLjMxDcMu6l8kQzciglHRcm4NOlUswI%3D"
@@ -40,12 +57,42 @@ ans=dict(zip(tags,values))
 def abc():
     return render_template("home.html")
 
+@app.route("/upload",methods=['POST','GET'])
+def upload():
+    if request.method == 'POST':
+        if request.form.get("upload"):
+            img = request.files['file']
+            if img and allowed_file(img.filename):
+                filename = secure_filename(img.filename)
+                img.save(filename)
+                blob_client = blob_service_client.get_blob_client(container = container, blob = filename)
+                with open(filename, "rb") as data:
+                    try:
+                        blob_client.upload_blob(data, overwrite=True)
+                        msg = ""+filename+" Upload Done ! "
+                        fileurl="https://files121.blob.core.windows.net/uploads/"+filename
+
+                    except:
+                        pass
+                os.remove(filename)
+            return render_template("upload_page.html", msg=msg,fileurl=fileurl)
+        
+
+             
+
+    else:
+        return render_template("upload_page.html",fileurl="")
+    
+
+        
+
+
 @app.route("/")
 def default():
     return render_template("index.html",rows=data,ans=ans)
 
 
-
+#https://files121.blob.core.windows.net/uploads/16.jpg
 
 @app.route("/analysisresults", methods=["GET","POST"])
 def hello():
@@ -55,7 +102,7 @@ def hello():
         if(formUrl==""):
             return render_template("index.html",rows=data,ans=ans)
         endpoint = "https://fsiformrecognizer.cognitiveservices.azure.com/"
-        key = "b1786032cc014d0f9c4cd24530e3fb6d"
+        key = os.environ['RECOG_KEY']
         form_recognizer_client = FormRecognizerClient(endpoint, AzureKeyCredential(key))
         form_training_client = FormTrainingClient(endpoint, AzureKeyCredential(key))
         poller = form_recognizer_client.begin_recognize_custom_forms_from_url(model_id = "42ef222f-7a31-4045-833c-09c8d4d688a5", form_url=formUrl)
