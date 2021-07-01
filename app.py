@@ -15,8 +15,8 @@ from werkzeug.utils import secure_filename
 from azure.storage.blob import BlobServiceClient
 app = Flask(__name__)
 
-account = "files121"   # Azure account name
-      # Azure Storage account access key  
+####################Storage Setup###############################################
+account = "files121"   # Azure account name 
 connect_str = os.environ['STORAGE_CONN_STR']
 container = "uploads"
 allowed_ext = set(['txt', 'pdf', 'png', 'jpg', 'jpeg'])
@@ -27,8 +27,9 @@ blob_service_client = BlobServiceClient.from_connection_string(connect_str)
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in allowed_ext
+###############################################################################
 
-
+###########for Default page based on Densa-Shark example#######################
 endpoint = "https://fsiformrecognizer.cognitiveservices.azure.com/"
 key = os.environ['RECOG_KEY']
 form_recognizer_client = FormRecognizerClient(endpoint, AzureKeyCredential(key))
@@ -50,7 +51,7 @@ for recognized_form in result:
         values.append(field.value)
 data=tuple(zip(tags,values))   
 ans=dict(zip(tags,values))
- 
+################################################################################### 
 
 
 @app.route("/input")
