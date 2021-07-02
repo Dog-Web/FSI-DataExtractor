@@ -13,11 +13,14 @@ from azure.ai.formrecognizer import FormTrainingClient
 from azure.core.credentials import AzureKeyCredential
 from werkzeug.utils import secure_filename
 from azure.storage.blob import BlobServiceClient
+from dotenv import load_dotenv
 app = Flask(__name__)
+load_dotenv()
 
 ####################Storage Setup###############################################
 account = "files121"   # Azure account name 
 connect_str = os.environ['STORAGE_CONN_STR']
+#connect_str ="DefaultEndpointsProtocol=https;AccountName=files121;AccountKey=FFtQLwIBuXrBDDswwdXDtEspoTFZUsv4MV0h2074uwECg/6+tyz7UhyNjKXLl3Pd7xOR13LqtmPVPNkbHjNKzQ==;EndpointSuffix=core.windows.net"
 container = "uploads"
 allowed_ext = set(['txt', 'pdf', 'png', 'jpg', 'jpeg'])
 max_length =  500 * 1024 * 1024  
@@ -122,4 +125,4 @@ def hello():
     return render_template("index.html",rows=data,ans=ans)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
