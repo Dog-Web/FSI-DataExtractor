@@ -1,6 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+body {
+  background-color: #f5fafe;
+}
+
+h1 {
+  color: #f49531;
+  margin-left: 40px;
+  padding-top: 70px;
+  font-family: "Archiboblack", "Archiboblack", fantasy;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+    max-height: 60px;
+transition-duration: 0.5s;
+
+}
+form {
+  padding-top: 70px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+nav{margin:0}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(240, 215, 190);
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: rgb(194, 189, 189);}
+
+ul.topnav li a.active {background-color: #f5fafe;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+
+
+
+
+  </style>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="static/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
@@ -23,12 +84,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <div class="navbar">
-      <h2> </h2>
-  </div>
+  <div id=nav>  <ul class="topnav">
+    <li><a class="active" href="#home"><img id="logo" src="{{url_for('static', filename='OriginalonTransparent.png')}}" alt="logo"></a></li>
+
+    <li class="right"><a href="#about"></a></li>
+  </ul>    </div>
   <hr>
   <div class="container" align="center">
-  <h2>FSI Report</h2>
+  <h2>Digital FSI Report</h2>
   <div class="card" style="width:400px">
     <div class="card-body ">
       <form action="/upload" method="POST" enctype="multipart/form-data">
