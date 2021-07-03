@@ -45,15 +45,16 @@ values=[]
 for recognized_form in result:
     print("Form type: {}".format(recognized_form.form_type))
     for name, field in recognized_form.fields.items():
-        print("Field '{}' has value '{}' and a confidence score of {}".format(
-            name,
-            field.value,
-            field.confidence
-        ))
+        #print("Field '{}' has value '{}' and a confidence score of {}".format(
+        #    name,
+        #   field.value,
+        #    field.confidence
+        #))
         tags.append(name)
         values.append(field.value)
 data=tuple(zip(tags,values))   
 ans=dict(zip(tags,values))
+
 ################################################################################### 
 
 
@@ -119,10 +120,29 @@ def hello():
                 values.append(field.value)
         data=tuple(zip(tags,values))   
         ans=dict(zip(tags,values))
+        filename=ans["Name of the ship"] +"_Dated_"+ ans["Date of FSI"]
+        filename = secure_filename(filename)
+        print(filename)
+        with open(filename+".json", 'w') as fp:
+                    json.dump(ans, fp)
+        blob_client = blob_service_client.get_blob_client(container = container, blob = filename+".json")
+        with open(filename+".json", "rb") as asdf:
+            try:
+                blob_client.upload_blob(asdf, overwrite=True)
+                
+                
+            
+                #fileurl="https://files121.blob.core.windows.net/uploads/"+filename
+
+            except:
+                pass
+        os.remove(filename+".json")
+
+
 
         
        
     return render_template("index.html",rows=data,ans=ans)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
