@@ -7,6 +7,7 @@ import sys
 import os
 from requests import get, post
 import urllib
+from urllib.request import urlopen
 from azure.core.exceptions import ResourceNotFoundError
 from azure.ai.formrecognizer import FormRecognizerClient
 from azure.ai.formrecognizer import FormTrainingClient
@@ -20,7 +21,6 @@ load_dotenv()
 ####################Storage Setup###############################################
 account = "files121"   # Azure account name 
 connect_str = os.environ['STORAGE_CONN_STR']
-#connect_str ="DefaultEndpointsProtocol=https;AccountName=files121;AccountKey=FFtQLwIBuXrBDDswwdXDtEspoTFZUsv4MV0h2074uwECg/6+tyz7UhyNjKXLl3Pd7xOR13LqtmPVPNkbHjNKzQ==;EndpointSuffix=core.windows.net"
 container = "uploads"
 allowed_ext = set(['txt', 'pdf', 'png', 'jpg', 'jpeg'])
 max_length =  500 * 1024 * 1024  
@@ -125,18 +125,21 @@ def hello():
         print(filename)
         with open(filename+".json", 'w') as fp:
                     json.dump(ans, fp)
-        blob_client = blob_service_client.get_blob_client(container = container, blob = filename+".json")
+        blob_client_2 = blob_service_client.get_blob_client(container = "saveddata", blob = filename+".json")
         with open(filename+".json", "rb") as asdf:
             try:
-                blob_client.upload_blob(asdf, overwrite=True)
+                blob_client_2.upload_blob(asdf, overwrite=True)
                 
                 
-            
-                #fileurl="https://files121.blob.core.windows.net/uploads/"+filename
 
             except:
                 pass
         os.remove(filename+".json")
+        #To read the saved JSON from saveddata
+        #fileurl="https://files121.blob.core.windows.net/saveddata/"+filename+".json"
+        #data_json=json.loads(urlopen(fileurl).read())
+        #print(data_json)
+
 
 
 
