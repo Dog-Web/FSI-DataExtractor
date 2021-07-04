@@ -96,6 +96,11 @@ def upload():
 def default():
     return render_template("index.html",rows=data,ans=ans)
 
+@app.route("/reading")
+def read():
+    return render_template("loading.html")
+
+
 
 #https://files121.blob.core.windows.net/uploads/16.jpg
 
@@ -148,4 +153,4 @@ def hello():
     return render_template("index.html",rows=data,ans=ans)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
